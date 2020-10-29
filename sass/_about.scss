@@ -1,0 +1,139 @@
+.about{
+	
+
+	&__left{
+		grid-column: full-start / col-end 4;	
+		display: grid;
+		grid-template-columns: repeat(6, 1fr);
+		grid-template-rows: repeat(6, 1fr);
+
+				@media only screen and (max-width: 50em){
+			grid-column: center-start / center-end;
+	}
+
+		@media only screen and (max-width: 28.125em){
+		padding: 2rem;
+	}
+
+	}
+
+	&__details{
+		grid-column: 2 / 7;
+		grid-row: 2 / 6;
+		background-color: white;
+		padding: 5rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+	@media only screen and (max-width: 75em){
+		padding: 2rem;
+	}
+
+			@media only screen and (max-width: 50em){
+			grid-row: 2 / 6;
+			grid-column: 2 / 6;
+	}	
+
+			@media only screen and (max-width: 28.125em){
+			grid-column: 1 / 7;
+		}
+
+
+	}
+
+	&__block{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		p{
+			font-size: 1.1rem;
+			letter-spacing: 1px;
+
+		@media only screen and (max-width: 50em){
+			text-align: end;
+			font-size: 1.3rem
+	}
+
+		}
+	}
+
+	&__orgs{
+		margin-left: 5rem;
+		text-align: end;
+
+		@media only screen and (max-width: 62.5em){
+			margin-left: 0;
+	}
+		span{
+			font-size: 1.4rem;
+
+		}
+
+		p{
+			letter-spacing: 1px;
+		}
+	}
+
+
+	&__title{
+		grid-column: 2 / 5;
+		padding: 2rem 5rem;
+		background-image: linear-gradient(to bottom, #f55649, #f44030);
+		text-align: center;
+		color: white;
+		transform: translateY(20%);
+		box-shadow:  0 2rem 5rem rgba(#000, .1);
+		border-radius: 1rem;
+		border-bottom-right-radius: 3rem;
+
+	@media only screen and (max-width: 75em){
+		transform: translateY(0%);
+	}
+
+	@media only screen and (max-width: 75em){
+		grid-column: 2 / 7;
+		padding: 4rem;
+		border-bottom-right-radius: 0;
+		box-shadow:  none;
+
+	}
+
+		@media only screen and (max-width: 50em){
+		grid-column: 2 / 6;
+		transform: translateY(-10%);
+		border-bottom-right-radius: 0;
+	}		
+
+		@media only screen and (max-width: 37.5em){
+		
+		transform: translateY(0%);
+
+	}
+	}
+
+	&__right{
+		grid-column: col-end 4 / full-end;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: center;
+		padding: 12rem;
+
+
+	@media only screen and (max-width: 50em){
+		grid-column: center-start / center-end;
+	}	
+
+		@media only screen and (max-width: 37.5em){
+			margin-bottom: 10rem;
+		}
+
+		p{
+			letter-spacing: 1px;
+			font-size: 1.2rem;
+
+
+		}
+	}
+}

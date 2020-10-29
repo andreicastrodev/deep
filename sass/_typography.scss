@@ -1,0 +1,59 @@
+.header-1{
+	font-size: 4rem;
+	font-weight: 700;
+
+		@media only screen and (max-width: $bp-medium){
+		font-size: 4.5rem;
+	}
+}
+
+.header-2{
+	font-size: 2.5rem;
+	font-weight: 700;
+}
+
+.header-2-w{
+	font-size: 2.5rem;
+	font-weight: 700;
+	color: #fff;
+
+		@media only screen and (max-width: 75em){
+		font-size: 2.2rem;
+	}
+
+	
+
+}
+
+.header-3{
+	font-size: 1.6rem;
+	font-weight: 700;
+}
+
+.header-3-c{
+	font-size: 1.6rem;
+	font-weight: 700;
+	color: $color-primary;
+}
+
+.header-4-w{
+	font-size: 1.6rem;
+	font-weight: 700;
+	color: white;
+	display: inline;
+}
+
+.header-4-c{
+	font-size: 1.6rem;
+	font-weight: 700;
+	color: $color-primary;
+	display: inline;
+}
+
+
+.header-5-g{
+	color: $color-grey-dark;
+	display: inline;
+	font-size:  1.1rem;
+	
+}

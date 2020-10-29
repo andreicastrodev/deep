@@ -1,0 +1,20 @@
+.sponsor{
+	grid-column: center-start / center-end;
+	margin: 10rem 0;
+	text-align: center;
+	padding: 2rem;
+	&__block{
+		display: grid;
+		grid-template-columns: repeat(auto-fit,minmax(50rem, 1fr));
+		align-items: center;
+		justify-items: center;
+		grid-gap: 8rem;
+	}
+
+	&__img{
+		width: 40%;
+		display: block;
+		filter: brightness(50%);
+
+	}
+}

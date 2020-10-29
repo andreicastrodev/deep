@@ -1,0 +1,112 @@
+// Colors
+$color-primary:#f55649;
+$color-primary-dark:#f44030;
+
+
+$color-grey:#bbbbbb;
+$color-grey-light:#f6f6f6;
+$color-grey-dark:#a2a2a2;
+
+// font
+$font-family: 'Lato', sans-serif;
+
+//helper class
+
+.mb-small{
+	margin-bottom: 2rem;
+}
+.mb-medium{
+	margin-bottom: 5rem;
+}
+
+.mt-medium{
+	margin-top: 5rem;
+}
+
+.center{
+	text-align: center;
+}
+
+.ml-small{
+	margin-left: .3rem;
+}
+
+
+// Responsive BREAKPOINTTS
+
+$bp-largest:75em; //1200 px
+$bp-large:62.5em; //1000px
+$bp-medium:50em; // 800px
+$bp-small:37.5em; // 600px
+$bp-smallest: 28.125em;
+
+
+*,
+*::before,
+*::after{
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+
+html{
+	box-sizing: border-box;
+	font-size: 62.5%; // 10px/16px  =62.5% = 1 rem = 10 px;
+		@media only screen and (max-width: 75em){
+		font-size: 50%;
+	}
+			@media only screen and (max-width: 37.5em){
+		font-size: 40%;
+	}
+
+				@media only screen and (max-width: 28.125em){
+		font-size: 35%;
+	}
+
+}
+
+
+body{	
+	font-family: $font-family;
+	background-color: $color-grey-light;
+}
+
+
+.container{
+	display: grid;
+	grid-template-rows: 8rem 100vh min-content repeat(2, min-content) 100vh repeat(2, min-content) 15rem;
+	grid-template-columns:[full-start] 1fr [center-start] repeat(8 ,[col-start] minmax(min-content, 14rem)[col-end]) [center-end] 1fr[full-end];
+
+		@media only screen and (max-width: $bp-medium){
+		grid-template-rows: 8rem repeat(4, min-content)  repeat(2, min-content) 100vh repeat(2, min-content) 10rem;
+	}		
+}
+
+.btn{
+	background-image: linear-gradient( to bottom, 
+	rgba($color-primary, 1), 
+	rgba($color-primary-dark, 1));
+	padding: 1rem 3rem;
+	border-bottom-right-radius: .5rem;
+	text-transform: uppercase;
+	font-weight: 700;
+	letter-spacing: 1px;
+	font-family: $font-family;
+	color: white;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	transition: all .2s;
+
+			@media only screen and (max-width: 37.5em){
+		font-size: 1.2rem;
+	}
+	&:hover{
+		transform: translateY(-2px);
+	}
+
+	&:active{
+		transform:translateY(-1px);
+	}
+}
